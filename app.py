@@ -12,5 +12,7 @@ boggle_game = Boggle()
 
 @app.route('/')
 def display_board():
+    """ Creates a new game board, saves it in the session, sends to HTML
+    """
     session['board'] = boggle_game.make_board()
     return render_template('base.html', board=session['board'])

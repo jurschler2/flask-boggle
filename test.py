@@ -9,5 +9,9 @@ app.config['DEBUG_TB_HOSTS'] = ['dont-show-debug-toolbar']
 
 class FlaskTests(TestCase):
 
-    # TODO -- write tests for every view function / feature!
+    def test_board_display(self):
+        " test display of game board on HTML"
 
+        with app.test_client() as client:
+            response = client.get('/')
+            self.assertEqual(response.status_code, 200)
