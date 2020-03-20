@@ -20,14 +20,25 @@
     </table>
   {% endblock %}
   <br>
-  <form action="">
+  <form action="/check-word" id="guess-form">
     <label for="">
-      <input type="text">
+      <input id="word-input" name="word" type="text">
       Word Guess
     </label>
-    <button>Guess it</button>
+    <button id="guess-btn">Guess it</button>
   </form>
-  
+  <div id="word-msg">
+
+  </div>
+  <br>
+  <br>
+  <div >The Score is: <span id ="scoreboard">0</span></div>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
   <script src="/static/script.js"></script>
 </body>
 </html>
