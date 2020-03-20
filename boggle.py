@@ -13,7 +13,7 @@ class Boggle():
     def read_dict(self, dict_path):
         """Read and return all words in dictionary."""
 
-        dict_file = open(dict_path)
+        dict_file = open(dict_path) # opening file here
         words = [w.strip() for w in dict_file]
         dict_file.close()
         return words
